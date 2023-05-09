@@ -1,0 +1,3 @@
+common/*
+playbooks/*
+!playbooks/add_user.yml
