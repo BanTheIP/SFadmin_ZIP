@@ -1,0 +1,16 @@
+---
+
+
+- name: Install Apache on server
+  apt:
+    name: apache2
+    state: latest
+
+
+- name: Ansible replace apache ports
+  replace:
+    path: /etc/apache2/ports.conf
+    regexp: '^Listen 80$'
+    replace: 'Listen 8080'
+
+  notify: Start apache

@@ -1,0 +1,9 @@
+---
+
+- name: Install Postfix 
+  apt:
+    name: postfix
+    state: latest
+  
+  
+  notify: Start Postfix

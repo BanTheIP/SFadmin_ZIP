@@ -1,0 +1,9 @@
+---
+
+
+- name: Install postgresql-12
+  apt:
+    name: postgresql-12
+
+
+  notify: Start postgresql

@@ -1,0 +1,7 @@
+---
+
+
+- name: Install PHP 7.4
+  apt:
+    name: php7.4
+    state: present

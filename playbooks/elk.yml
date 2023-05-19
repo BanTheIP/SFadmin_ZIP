@@ -1,0 +1,10 @@
+---
+
+
+- hosts: server3
+  become: yes
+  roles:
+    - elasticsearch
+    - logstash
+    - kibana 
+

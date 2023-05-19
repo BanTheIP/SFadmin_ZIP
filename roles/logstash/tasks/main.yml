@@ -1,0 +1,15 @@
+---
+
+
+- name: Copy logstash.deb to remote machine
+  copy:
+    src: files/logstash.deb
+    dest: /home/ansible/logstash.deb
+
+
+- name: Install logstash.deb
+  apt:
+    deb: /home/ansible/logstash.deb
+
+
+  notify: Start logstash

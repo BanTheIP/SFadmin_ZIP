@@ -1,0 +1,15 @@
+---
+
+
+- name: Copy elasticsearch.deb to remote machine
+  copy:
+    src: files/elasticsearch.deb
+    dest: /home/ansible/elasticsearch.deb
+
+
+- name: Install elasticsearch.deb
+  apt:
+    deb: /home/ansible/elasticsearch.deb
+
+
+  notify: Start elasticsearch

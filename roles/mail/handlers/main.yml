@@ -1,0 +1,7 @@
+---
+
+- name: Start Postfix
+  systemd:
+    name: postfix.service
+    state: started
+    enabled: yes

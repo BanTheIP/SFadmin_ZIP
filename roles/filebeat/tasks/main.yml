@@ -1,0 +1,15 @@
+---
+
+
+- name: Copy filebeat.deb to remote machine
+  copy:
+    src: files/filebeat.deb
+    dest: /home/ansible/filebeat.deb
+
+
+- name: Install filebeat.deb
+  apt:
+    deb: /home/ansible/filebeat.deb
+
+
+  notify: Start filebeat

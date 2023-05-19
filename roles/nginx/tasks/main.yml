@@ -1,0 +1,10 @@
+---
+
+
+- name: Install nginx on server
+  apt:
+    name: nginx
+    state: latest
+
+
+  notify: Start nginx

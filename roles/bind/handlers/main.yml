@@ -1,0 +1,8 @@
+---
+
+
+- name: Start bind
+  systemd:
+    name: bind9
+    state: started
+    enabled: yes

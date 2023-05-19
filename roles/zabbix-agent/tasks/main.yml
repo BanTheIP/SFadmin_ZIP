@@ -1,0 +1,22 @@
+---
+
+
+- name: Install zabbix-agent on Ubuntu
+  apt:
+    name: zabbix-agent
+    state: latest
+
+
+- name: Ansible replace string Server zabbix-agent
+  replace:
+    path: /etc/zabbix/zabbix_agentd.conf
+    regexp: 'Server=127.0.0.1'
+    replace: 'Server=10.8.0.1'
+
+    
+- name: Ansible replace string ServerActive zabbix-agent
+  replace:
+    path: /etc/zabbix/zabbix_agentd.conf
+    regexp: 'ServerActive=127.0.0.1'
+    replace: 'ServerActive=10.8.0.1'
+  notify: Start zabbix-agent
